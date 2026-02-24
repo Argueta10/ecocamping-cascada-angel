@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cascada del Ángel - Eco Camping Digital</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin:0;
+            padding:0;
+            background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .contenedor{
+            background-color: rgba(255,255,255,0.95);
+            min-height:100vh;
+        }
+
+        header{
+            background:#2e8b57;
+            color:white;
+            text-align:center;
+            padding:40px 20px;
+            position: relative;
+        }
+
+        header h1{
+            margin:0;
+        }
+
+        .slogan{
+            margin-top:10px;
+            font-size:18px;
+            font-style: italic;
+        }
+
+        .logo{
+            position:absolute;
+            top:15px;
+            right:20px;
+            width:90px;
+        }
+
+        nav{
+            background:#1f5c3a;
+            text-align:center;
+            padding:15px;
+        }
+
+        nav a{
+            color:white;
+            margin:15px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        section{
+            padding:40px;
+            margin:20px;
+        }
+
+        h2{
+            color:#2e8b57;
+        }
+
+        ul{
+            line-height:30px;
+        }
+
+        input{
+            padding:8px;
+            width:250px;
+        }
+
+        .btn{
+            background:#2e8b57;
+            color:white;
+            padding:10px 15px;
+            border:none;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        .resultado{
+            font-weight:bold;
+            color:#1f5c3a;
+            margin-top:10px;
+        }
+
+        .carrusel{
+            width:100%;
+            max-width:600px;
+            margin:auto;
+            overflow:hidden;
+            border-radius:10px;
+        }
+
+        .carrusel img{
+            width:100%;
+            display:none;
+        }
+
+        .carrusel img.activa{
+            display:block;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<header>
+    <img src="logo.png" class="logo">
+    <h1>Cascada del Ángel</h1>
+    <div class="slogan">
+        Vive la experiencia de acampar con control, comodidad y todo lo que necesitas para descansar en plena naturaleza.
+    </div>
+</header>
+
+<nav>
+    <a href="#">Inicio</a>
+    <a href="#">Reservas</a>
+    <a href="#">Paquetes</a>
+    <a href="#">Mapas</a>
+</nav>
+
+<section>
+    <h2>Reservas en Línea</h2>
+
+    <form onsubmit="return reservar()">
+
+        <label>Nombre:</label><br>
+        <input type="text" id="nombre" required><br><br>
+
+        <label>Correo:</label><br>
+        <input type="email" id="correo" required><br><br>
+
+        <label>Fecha de llegada:</label><br>
+        <input type="date" id="entrada" required onchange="calcularDias()"><br><br>
+
+        <label>Fecha de salida:</label><br>
+        <input type="date" id="salida" required onchange="calcularDias()"><br><br>
+
+        <label>Cantidad de personas:</label><br>
+        <input type="number" min="1" id="personas" required><br><br>
+
+        <div class="resultado" id="diasEstadia"></div><br>
+
+        <button class="btn">Reservar Ahora</button>
+
+    </form>
+</section>
+
+<section>
+    <h2>Venta de Paquetes Turísticos</h2>
+    <ul>
+        <li>Paquete Básico de Camping</li>
+        <li>Paquete Familiar</li>
+        <li>Paquete Aventura con Guía</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Mapas Informativos</h2>
+    <p>Explora nuestros senderos, zonas de camping y actividades de aventura.</p>
+
+    <div class="carrusel">
+        <!-- Camping -->
+        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4" class="activa">
+        <!-- Cascada -->
+        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+        <!-- Aventura / canopy -->
+        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7">
+    </div>
+
+</section>
+
+</div>
+
+<script>
+
+function calcularDias(){
+    var entrada = document.getElementById("entrada").value;
+    var salida = document.getElementById("salida").value;
+
+    if(entrada && salida){
+        var fechaEntrada = new Date(entrada);
+        var fechaSalida = new Date(salida);
+
+        var diferencia = fechaSalida - fechaEntrada;
+        var dias = diferencia / (1000 * 60 * 60 * 24);
+
+        if(dias > 0){
+            document.getElementById("diasEstadia").innerHTML =
+            "Estadía de " + dias + " día(s).";
+        }else{
+            document.getElementById("diasEstadia").innerHTML =
+            "La fecha de salida debe ser mayor a la fecha de llegada.";
+        }
+    }
+}
+
+function reservar(){
+
+    var nombre = document.getElementById("nombre").value;
+    var correo = document.getElementById("correo").value;
+    var personas = document.getElementById("personas").value;
+    var entrada = document.getElementById("entrada").value;
+    var salida = document.getElementById("salida").value;
+
+    if(nombre && correo && personas && entrada && salida){
+
+        var fechaEntrada = new Date(entrada);
+        var fechaSalida = new Date(salida);
+
+        if(fechaSalida > fechaEntrada){
+            alert("Su reserva se ha realizado de forma exitosa. ¡Gracias por elegir Cascada del Ángel!");
+        }else{
+            alert("Verifique las fechas seleccionadas.");
+        }
+
+        return false;
+    }
+
+}
+
+var indice = 0;
+var imagenes = document.querySelectorAll(".carrusel img");
+
+setInterval(function(){
+    imagenes[indice].classList.remove("activa");
+    indice = (indice + 1) % imagenes.length;
+    imagenes[indice].classList.add("activa");
+},3000);
+
+</script>
+
+</body>
+</html>
