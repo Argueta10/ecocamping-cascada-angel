@@ -154,6 +154,8 @@
         <div class="resultado" id="diasEstadia"></div><br>
 
         <button class="btn">Reservar Ahora</button>
+        
+        <div class="resultado" id="mensajeReserva"></div>
 
     </form>
 </section>
@@ -221,15 +223,15 @@ function reservar(){
         var fechaSalida = new Date(salida);
 
         if(fechaSalida > fechaEntrada){
-            alert("Su reserva se ha realizado de forma exitosa. ¡Gracias por elegir Cascada del Ángel!");
+            document.getElementById("mensajeReserva").innerHTML =
+            "✔ Su reserva se ha realizado con éxito. ¡Gracias por elegir Cascada del Ángel!";
         }else{
-            alert("Verifique las fechas seleccionadas.");
+            document.getElementById("mensajeReserva").innerHTML =
+            "⚠ Verifique las fechas seleccionadas.";
         }
 
         return false;
     }
-
-}
 
 var indice = 0;
 var imagenes = document.querySelectorAll(".carrusel img");
