@@ -217,21 +217,28 @@ function reservar(){
     var entrada = document.getElementById("entrada").value;
     var salida = document.getElementById("salida").value;
 
+    var mensaje = document.getElementById("mensajeReserva");
+
     if(nombre && correo && personas && entrada && salida){
 
         var fechaEntrada = new Date(entrada);
         var fechaSalida = new Date(salida);
 
         if(fechaSalida > fechaEntrada){
-            document.getElementById("mensajeReserva").innerHTML =
+            mensaje.innerHTML =
             "✔ Su reserva se ha realizado con éxito. ¡Gracias por elegir Cascada del Ángel!";
         }else{
-            document.getElementById("mensajeReserva").innerHTML =
-            "⚠ Verifique las fechas seleccionadas.";
+            mensaje.innerHTML =
+            "⚠ La fecha de salida debe ser mayor a la fecha de llegada.";
         }
 
-        return false;
+    } else {
+        mensaje.innerHTML =
+        "⚠ Por favor complete todos los campos.";
     }
+
+    return false;
+}
 
 var indice = 0;
 var imagenes = document.querySelectorAll(".carrusel img");
