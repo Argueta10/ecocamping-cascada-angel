@@ -1,91 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Cascada del Ángel - Eco Camping Digital</title>
 
-    <style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body{
-            font-family: Arial;
-            margin:0;
-            padding:0;
-            background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
+<title>Eco Camping Cascada del Ángel</title>
 
-        .contenedor{
-            background-color: rgba(255,255,255,0.95);
-            min-height:100vh;
-        }
+<style>
 
-        header{
-            background:#2e8b57;
-            color:white;
-            text-align:center;
-            padding:40px 20px;
-            position: relative;
-        }
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
 
-        header h1{
-            margin:0;
-        }
+/* HEADER */
 
-        .slogan{
-            margin-top:10px;
-            font-size:18px;
-            font-style: italic;
-        }
+header{
+background:#2e8b57;
+color:white;
+padding:20px;
+text-align:center;
+position:relative;
+}
 
-        .logo{
-            position:absolute;
-            top:5px;
-            right:15px;
-            width:200px;
-        }
+.logo{
+position:absolute;
+right:20px;
+top:10px;
+width:110px;
+}
 
-        nav{
-            background:#1f5c3a;
-            text-align:center;
-            padding:15px;
-        }
+/* NAV */
 
-        nav a{
-            color:white;
-            margin:15px;
-            text-decoration:none;
-            font-weight:bold;
-        }
+nav{
+background:#1f5c3a;
+text-align:center;
+padding:12px;
+}
 
-        section{
-            padding:40px;
-            margin:20px;
-        }
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
 
-        h2{
-            color:#2e8b57;
-        }
+nav a:hover{
+text-decoration:underline;
+}
 
-        ul{
-            line-height:30px;
-        }
+/* HERO */
 
-        input{
-            padding:8px;
-            width:250px;
-        }
-
-        .btn{
-            background:#2e8b57;
-            color:white;
-            padding:10px 15px;
-            border:none;
-            cursor:pointer;
-            font-weight:bold;
-        }
-
-        .hero{
+.hero{
 height:80vh;
 display:flex;
 flex-direction:column;
@@ -93,10 +61,23 @@ justify-content:center;
 align-items:center;
 text-align:center;
 color:white;
-background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+
+background:
+linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
 url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+
 background-size:cover;
 background-position:center;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:20px;
 }
 
 .btn{
@@ -104,274 +85,308 @@ background:#2e8b57;
 padding:12px 25px;
 color:white;
 text-decoration:none;
-margin:10px;
 border-radius:5px;
+margin:5px;
 }
-        .servicios{
-padding:60px;
+
+.btn:hover{
+background:#1f5c3a;
+}
+
+/* SECCIONES */
+
+section{
+padding:60px 10%;
 text-align:center;
 }
+
+/* SERVICIOS */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
+margin-top:30px;
 }
 
 .card{
 background:white;
-padding:20px;
+padding:25px;
 border-radius:10px;
-box-shadow:0px 3px 10px rgba(0,0,0,0.2);
-}
-        .card:hover{
-transform:scale(1.05);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 transition:0.3s;
 }
-        
 
-        .resultado{
-            font-weight:bold;
-            color:#1f5c3a;
-            margin-top:10px;
-        }
+.card:hover{
+transform:scale(1.05);
+}
 
-        .carrusel{
-            width:100%;
-            max-width:600px;
-            margin:auto;
-            overflow:hidden;
-            border-radius:10px;
-        }
+/* GALERIA */
 
-        .carrusel img{
-            width:100%;
-            display:none;
-        }
+.galeria img{
+width:100%;
+border-radius:10px;
+}
 
-        .carrusel img.activa{
-            display:block;
-        }
+/* FORM */
 
-    </style>
+form{
+max-width:400px;
+margin:auto;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+background:#1f5c3a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+.resultado{
+margin-top:10px;
+font-weight:bold;
+color:#2e8b57;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.hero h1{
+font-size:30px;
+}
+
+.logo{
+width:80px;
+right:10px;
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div class="contenedor">
-
 <header>
-    <img src="logo.png" class="logo">
-    <h1>Cascada del Ángel</h1>
-    <div class="slogan">
-        Vive la experiencia de acampar con control, comodidad y todo lo que necesitas para descansar en plena naturaleza.
-    </div>
+
+<h1>Cascada del Ángel</h1>
+
+<p>Vive la experiencia de acampar con comodidad y aventura en plena naturaleza</p>
+
+<img src="logo.png" class="logo">
+
 </header>
-    <section class="hero">
+
+<nav>
+
+<a href="#">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="paquetes.html">Paquetes</a>
+<a href="#reservas">Reservas</a>
+<a href="faq.html">FAQ</a>
+<a href="misionvision.html">Misión y Visión</a>
+
+</nav>
+
+<section class="hero">
+
 <h1>Eco Camping Cascada del Ángel</h1>
-<p>Vive una experiencia única de naturaleza, aventura y descanso.</p>
+
+<p>Disfruta de naturaleza, aventura y descanso.</p>
 
 <a href="#reservas" class="btn">Reservar ahora</a>
-<a href="paquetes.html" class="btn2">Ver paquetes</a>
+
+<a href="paquetes.html" class="btn">Ver paquetes</a>
+
 </section>
 
-<section class="servicios">
+<section id="servicios">
 
 <h2>Servicios y Actividades</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Tour en Cuatrimoto</h3>
-<p>Explora senderos naturales con aventura.</p>
+<h3>Cuatrimoto</h3>
+<p>Recorre senderos naturales llenos de aventura.</p>
 </div>
 
 <div class="card">
 <h3>Cabalgata</h3>
-<p>Recorre la naturaleza a caballo.</p>
+<p>Explora la naturaleza a caballo.</p>
 </div>
 
 <div class="card">
 <h3>Canopy</h3>
-<p>Disfruta de una experiencia extrema.</p>
+<p>Vive una experiencia extrema entre los árboles.</p>
 </div>
 
 <div class="card">
 <h3>Rappel</h3>
-<p>Escalada segura en áreas designadas.</p>
+<p>Escalada segura con guías especializados.</p>
 </div>
 
 <div class="card">
 <h3>Área de Yoga</h3>
-<p>Relajación y conexión con la naturaleza.</p>
+<p>Relájate y conecta con la naturaleza.</p>
 </div>
 
 <div class="card">
 <h3>Zona de Camping</h3>
-<p>Espacios naturales para acampar.</p>
+<p>Espacios naturales para descansar y acampar.</p>
 </div>
 
 </div>
 
 </section>
-    
-<nav>
-    <a href="#">Inicio</a>
-    <a href="#">Reservas</a>
-    <a href="paquetes.html">Paquetes</a>
-    <a href="#">Mapas</a>
-    <a href="faq.html">Preguntas Frecuentes</a>
-    <a href="misionvision.html">Misión y Visión</a>
-</nav>
 
 <section>
-    <h2>Reservas en Línea</h2>
 
-    <form onsubmit="return reservar()">
+<h2>Paquetes de Camping</h2>
 
-        <label>Nombre:</label><br>
-        <input type="text" id="nombre" required><br><br>
+<div class="grid">
 
-        <label>Correo:</label><br>
-        <input type="email" id="correo" required><br><br>
+<div class="card">
 
-        <label>Fecha de llegada:</label><br>
-        <input type="date" id="entrada" required onchange="calcularDias()"><br><br>
-
-        <label>Fecha de salida:</label><br>
-        <input type="date" id="salida" required onchange="calcularDias()"><br><br>
-
-        <label>Cantidad de personas:</label><br>
-        <input type="number" min="1" id="personas" required><br><br>
-
-        <div class="resultado" id="diasEstadia"></div><br>
-
-        <button class="btn">Reservar Ahora</button>
-        
-        <div class="resultado" id="mensajeReserva"></div>
-
-    </form>
-</section>
-
-<section>
-    <h2>Venta de Paquetes Turísticos</h2>
-    <ul>
-        <li>Paquete Básico de Camping</li>
-        <li>Paquete Familiar</li>
-        <li>Paquete Aventura con Guía</li>
-    </ul>
-</section>
-
-    <section id="servicios">
-<h2>Servicios</h2>
+<h3>Paquete Familiar</h3>
 
 <ul>
-<li>Zona segura de camping</li>
-<li>Baños y duchas para visitantes</li>
-<li>Área de descanso y picnic</li>
-<li>Senderos ecológicos guiados</li>
-<li>Área de yoga y relajación</li>
-<li>Alquiler de equipo de camping</li>
-<li>Parqueo seguro</li>
+<li>Área de camping</li>
+<li>Senderismo</li>
+<li>Zona de fogata</li>
+<li>Acceso a baños</li>
 </ul>
-
-</section>
-    
-    <section id="actividades">
-<h2>Actividades de Aventura</h2>
-
-<ul>
-<li>Tour en cuatrimoto por senderos naturales</li>
-<li>Cabalgata guiada por la montaña</li>
-<li>Canopy entre árboles</li>
-<li>Rappel en zonas de roca</li>
-<li>Senderismo hacia la cascada</li>
-</ul>
-
-</section>
-
-<section>
-    <h2>Mapas Informativos</h2>
-    <p>Explora nuestros senderos, zonas de camping y actividades de aventura.</p>
-
-    <div class="carrusel">
-        <!-- Camping -->
-        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4" class="activa">
-        <!-- Cascada -->
-        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
-        <!-- Aventura / canopy -->
-        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7">
-    </div>
-
-</section>
 
 </div>
+
+<div class="card">
+
+<h3>Paquete Aventura</h3>
+
+<ul>
+<li>Cuatrimoto</li>
+<li>Canopy</li>
+<li>Rappel</li>
+<li>Camping</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Paquete Relax</h3>
+
+<ul>
+<li>Yoga</li>
+<li>Senderismo</li>
+<li>Acceso a la cascada</li>
+<li>Camping</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="galeria">
+
+<h2>Galería</h2>
+
+<div class="grid">
+
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+
+</div>
+
+</section>
+
+<section id="reservas">
+
+<h2>Reservas en Línea</h2>
+
+<form onsubmit="return reservar()">
+
+<input type="text" id="nombre" placeholder="Nombre" required>
+
+<input type="email" id="correo" placeholder="Correo" required>
+
+<label>Fecha de llegada</label>
+<input type="date" id="entrada" required onchange="calcularDias()">
+
+<label>Fecha de salida</label>
+<input type="date" id="salida" required onchange="calcularDias()">
+
+<input type="number" id="personas" placeholder="Cantidad de personas" min="1" required>
+
+<div id="diasEstadia"></div>
+
+<button class="btn">Reservar</button>
+
+<div class="resultado" id="mensajeReserva"></div>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>Eco Camping Cascada del Ángel</p>
+
+<p>Turismo ecológico • Aventura • Naturaleza</p>
+
+<p>© 2026</p>
+
+</footer>
 
 <script>
 
 function calcularDias(){
-    var entrada = document.getElementById("entrada").value;
-    var salida = document.getElementById("salida").value;
 
-    if(entrada && salida){
-        var fechaEntrada = new Date(entrada);
-        var fechaSalida = new Date(salida);
+var entrada=document.getElementById("entrada").value;
+var salida=document.getElementById("salida").value;
 
-        var diferencia = fechaSalida - fechaEntrada;
-        var dias = diferencia / (1000 * 60 * 60 * 24);
+if(entrada && salida){
 
-        if(dias > 0){
-            document.getElementById("diasEstadia").innerHTML =
-            "Estadía de " + dias + " día(s).";
-        }else{
-            document.getElementById("diasEstadia").innerHTML =
-            "La fecha de salida debe ser mayor a la fecha de llegada.";
-        }
-    }
+var fecha1=new Date(entrada);
+var fecha2=new Date(salida);
+
+var diferencia=(fecha2-fecha1)/(1000*60*60*24);
+
+document.getElementById("diasEstadia").innerHTML=
+"Estadía: "+diferencia+" días";
+
+}
+
 }
 
 function reservar(){
 
-    var nombre = document.getElementById("nombre").value;
-    var correo = document.getElementById("correo").value;
-    var personas = document.getElementById("personas").value;
-    var entrada = document.getElementById("entrada").value;
-    var salida = document.getElementById("salida").value;
+var mensaje=document.getElementById("mensajeReserva");
 
-    var mensaje = document.getElementById("mensajeReserva");
+mensaje.innerHTML="✔ Reserva realizada con éxito.";
 
-    if(nombre && correo && personas && entrada && salida){
+return false;
 
-        var fechaEntrada = new Date(entrada);
-        var fechaSalida = new Date(salida);
-
-        if(fechaSalida > fechaEntrada){
-            mensaje.innerHTML =
-            "✔ Su reserva se ha realizado con éxito. ¡Gracias por elegir Cascada del Ángel!";
-        }else{
-            mensaje.innerHTML =
-            "⚠ La fecha de salida debe ser mayor a la fecha de llegada.";
-        }
-
-    } else {
-        mensaje.innerHTML =
-        "⚠ Por favor complete todos los campos.";
-    }
-
-    return false;
 }
-
-var indice = 0;
-var imagenes = document.querySelectorAll(".carrusel img");
-
-setInterval(function(){
-    imagenes[indice].classList.remove("activa");
-    indice = (indice + 1) % imagenes.length;
-    imagenes[indice].classList.add("activa");
-},3000);
 
 </script>
 
 </body>
+
 </html>
