@@ -1,26 +1,257 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Preguntas Frecuentes</title>
+
+<title>Preguntas Frecuentes - Eco Camping</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
+
+/* HEADER */
+
+header{
+background:#2e8b57;
+color:white;
+padding:30px;
+text-align:center;
+position:relative;
+}
+
+.logo{
+position:absolute;
+right:20px;
+top:10px;
+width:80px;
+}
+
+/* NAV */
+
+nav{
+background:#1f5c3a;
+text-align:center;
+padding:12px;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* SECCIÓN */
+
+section{
+padding:60px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+/* FAQ */
+
+.faq{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+background:white;
+margin-bottom:15px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+overflow:hidden;
+}
+
+.faq-question{
+padding:20px;
+cursor:pointer;
+font-weight:bold;
+background:#ffffff;
+}
+
+.faq-question:hover{
+background:#f1f1f1;
+}
+
+.faq-answer{
+display:none;
+padding:20px;
+border-top:1px solid #ddd;
+color:#444;
+}
+
+/* FOOTER */
+
+footer{
+background:#1f5c3a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.logo{
+position:relative;
+display:block;
+margin:auto;
+right:auto;
+top:auto;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
+<header>
+
 <h1>Preguntas Frecuentes</h1>
 
-<h3>¿Se permiten mascotas?</h3>
-<p>Sí, siempre que estén bajo supervisión.</p>
+<p>Resolvemos las dudas más comunes de nuestros visitantes</p>
 
-<h3>¿Qué incluye el acceso al eco camping?</h3>
-<p>Acceso a senderos, zona de camping y baños.</p>
+<img src="logo.png" class="logo">
 
-<h3>¿Cómo se realizan las reservas?</h3>
-<p>A través de nuestra página principal en el sistema de reservas.</p>
+</header>
 
-<a href="index.html" style="background:#2e8b57;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;">
-Home
-</a>
+<nav>
+
+<a href="index.html">Inicio</a>
+<a href="servicios.html">Servicios</a>
+<a href="paquetes.html">Paquetes</a>
+<a href="reservas.html">Reservas</a>
+<a href="faq.html">FAQ</a>
+<a href="misionvision.html">Misión y Visión</a>
+
+</nav>
+
+<section>
+
+<h2>Dudas Frecuentes</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<div class="faq-question">
+¿Se permiten mascotas?
+</div>
+
+<div class="faq-answer">
+Sí, siempre que estén bajo supervisión y sus dueños mantengan limpio el espacio.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+¿Qué incluye el acceso al eco camping?
+</div>
+
+<div class="faq-answer">
+Incluye acceso a senderos naturales, zona de camping, áreas de descanso y baños.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+¿Cómo se realizan las reservas?
+</div>
+
+<div class="faq-answer">
+Las reservas se realizan a través de nuestra página web en la sección de reservas.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+¿Hay estacionamiento disponible?
+</div>
+
+<div class="faq-answer">
+Sí, contamos con área de estacionamiento para visitantes.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+¿Se puede llevar comida?
+</div>
+
+<div class="faq-answer">
+Sí, los visitantes pueden llevar sus propios alimentos y utilizar las zonas de picnic.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Eco Camping Cascada del Ángel</p>
+
+<p>Turismo ecológico • Aventura • Naturaleza</p>
+
+</footer>
+
+
+<script>
+
+const preguntas = document.querySelectorAll(".faq-question");
+
+preguntas.forEach(pregunta => {
+
+pregunta.addEventListener("click", () => {
+
+const respuesta = pregunta.nextElementSibling;
+
+if(respuesta.style.display === "block"){
+respuesta.style.display = "none";
+}
+else{
+respuesta.style.display = "block";
+}
+
+});
+
+});
+
+</script>
 
 </body>
+
 </html>
