@@ -169,6 +169,20 @@ font-size:30px;
 width:80px;
 right:10px;
 }
+  .redes{
+position:fixed;
+bottom:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.redes img{
+width:50px;
+height:50px;
+cursor:pointer;
+}
 
 }
 
@@ -314,34 +328,6 @@ right:10px;
 
 </section>
 
-<section id="reservas">
-
-<h2>Reservas en Línea</h2>
-
-<form onsubmit="return reservar()">
-
-<input type="text" id="nombre" placeholder="Nombre" required>
-
-<input type="email" id="correo" placeholder="Correo" required>
-
-<label>Fecha de llegada</label>
-<input type="date" id="entrada" required onchange="calcularDias()">
-
-<label>Fecha de salida</label>
-<input type="date" id="salida" required onchange="calcularDias()">
-
-<input type="number" id="personas" placeholder="Cantidad de personas" min="1" required>
-
-<div id="diasEstadia"></div>
-
-<button class="btn">Reservar</button>
-
-<div class="resultado" id="mensajeReserva"></div>
-
-</form>
-
-</section>
-
 <footer>
 
 <p>Eco Camping Cascada del Ángel</p>
@@ -384,7 +370,17 @@ return false;
 }
 
 </script>
+<div class="redes">
 
+<a href="https://wa.me/50494884281" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
+<a href="#">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</a>
+
+</div>
 </body>
 
 </html>
