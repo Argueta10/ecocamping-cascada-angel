@@ -49,6 +49,11 @@ header{
 text-align:center;
 }
 
+ img{
+max-width:100%;
+height:auto;
+}
+
 }
 
 
@@ -199,24 +204,28 @@ gap:12px;
 z-index:9999;
 }
 
-.redes a{
+/* botón circular */
+.btn-red{
 width:55px;
 height:55px;
-display:flex;
-justify-content:center;
-align-items:center;
 background:white;
 border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 overflow:hidden;
 }
 
-.icono-red{
-width:60%;
-height:auto;
+/* imagen dentro del botón */
+.btn-red img{
+width:28px;
+height:28px;
+object-fit:contain;
 }
 
-.redes a:hover{
+/* efecto hover */
+.btn-red:hover{
 transform:scale(1.1);
 transition:0.3s;
 }
@@ -376,15 +385,16 @@ transition:0.3s;
 
  <div class="redes">
 
-<a href="https://wa.me/50494884281" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="icono-red">
+<a href="https://wa.me/50494884281" target="_blank" class="btn-red">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
 
-<a href="#">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="icono-red">
+<a href="#" class="btn-red">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
 </a>
 
 </div>
+ 
 </body>
 
 </html>
