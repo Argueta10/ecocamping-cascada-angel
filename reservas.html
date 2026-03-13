@@ -108,39 +108,64 @@ color:#2e8b57;
 <script>
 
 function calcularDias(){
+    var entrada = document.getElementById("entrada").value;
+    var salida = document.getElementById("salida").value;
 
-var entrada=document.getElementById("entrada").value;
-var salida=document.getElementById("salida").value;
+    if(entrada && salida){
+        var fechaEntrada = new Date(entrada);
+        var fechaSalida = new Date(salida);
 
-if(entrada && salida){
+        var diferencia = fechaSalida - fechaEntrada;
+        var dias = diferencia / (1000 * 60 * 60 * 24);
 
-var fecha1=new Date(entrada);
-var fecha2=new Date(salida);
-
-var dias=(fecha2-fecha1)/(1000*60*60*24);
-
-document.getElementById("diasEstadia").innerHTML=
-"Estadía: "+dias+" días";
-
-}
-
+        if(dias > 0){
+            document.getElementById("diasEstadia").innerHTML =
+            "Estadía de " + dias + " día(s).";
+        }else{
+            document.getElementById("diasEstadia").innerHTML =
+            "La fecha de salida debe ser mayor a la fecha de llegada.";
+        }
+    }
 }
 
 function reservar(){
 
-document.getElementById("mensajeReserva").innerHTML=
-"✔ Su reserva se ha realizado con éxito.";
+    var nombre = document.getElementById("nombre").value;
+    var correo = document.getElementById("correo").value;
+    var personas = document.getElementById("personas").value;
+    var entrada = document.getElementById("entrada").value;
+    var salida = document.getElementById("salida").value;
 
-return false;
+    var mensaje = document.getElementById("mensajeReserva");
 
+    if(nombre && correo && personas && entrada && salida){
+
+        var fechaEntrada = new Date(entrada);
+        var fechaSalida = new Date(salida);
+
+        if(fechaSalida > fechaEntrada){
+            mensaje.innerHTML =
+            "✔ Su reserva se ha realizado con éxito. ¡Gracias por elegir Cascada del Ángel!";
+        }else{
+            mensaje.innerHTML =
+            "⚠ La fecha de salida debe ser mayor a la fecha de llegada.";
+        }
+
+    } else {
+        mensaje.innerHTML =
+        "⚠ Por favor complete todos los campos.";
+    }
+
+    return false;
 }
 
+
+</script>
+  
   <a href="index.html" style="background:#2e8b57;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;">
 Home
 </a>
-
-</script>
-
+  
 </body>
 
 </html>
