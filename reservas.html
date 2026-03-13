@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservas - Cascada del Ángel</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#2e8b57;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+}
+
+section{
+padding:50px;
+text-align:center;
+}
+
+form{
+max-width:400px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+.btn{
+background:#2e8b57;
+color:white;
+padding:12px;
+border:none;
+width:100%;
+cursor:pointer;
+}
+
+.resultado{
+margin-top:10px;
+font-weight:bold;
+color:#2e8b57;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Reservas - Eco Camping Cascada del Ángel</h1>
+
+</header>
+
+<section>
+
+<h2>Reservas en Línea</h2>
+
+<form onsubmit="return reservar()">
+
+<input type="text" id="nombre" placeholder="Nombre" required>
+
+<input type="email" id="correo" placeholder="Correo" required>
+
+<label>Fecha de llegada</label>
+<input type="date" id="entrada" required onchange="calcularDias()">
+
+<label>Fecha de salida</label>
+<input type="date" id="salida" required onchange="calcularDias()">
+
+<input type="number" id="personas" placeholder="Cantidad de personas" min="1" required>
+
+<div id="diasEstadia"></div>
+
+<button class="btn">Reservar</button>
+
+<div class="resultado" id="mensajeReserva"></div>
+
+</form>
+
+</section>
+
+<script>
+
+function calcularDias(){
+
+var entrada=document.getElementById("entrada").value;
+var salida=document.getElementById("salida").value;
+
+if(entrada && salida){
+
+var fecha1=new Date(entrada);
+var fecha2=new Date(salida);
+
+var dias=(fecha2-fecha1)/(1000*60*60*24);
+
+document.getElementById("diasEstadia").innerHTML=
+"Estadía: "+dias+" días";
+
+}
+
+}
+
+function reservar(){
+
+document.getElementById("mensajeReserva").innerHTML=
+"✔ Su reserva se ha realizado con éxito.";
+
+return false;
+
+}
+
+</script>
+
+</body>
+
+</html>
