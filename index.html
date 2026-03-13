@@ -171,26 +171,25 @@ right:10px;
 }
  .redes{
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:25px;
+right:25px;
 display:flex;
 flex-direction:column;
-gap:10px;
-z-index:1000;
+gap:12px;
+z-index:999;
 }
 
 .icono-red{
-width:50px;
-height:50px;
+width:55px;
+height:55px;
 border-radius:50%;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
+cursor:pointer;
 transition:0.3s;
 }
 
 .icono-red:hover{
-transform:scale(1.1);
-}
-
+transform:scale(1.15);
 }
 
 </style>
@@ -335,41 +334,17 @@ transform:scale(1.1);
 
 </section>
 
-<script>
+  <footer>
 
-function calcularDias(){
+<p>Eco Camping Cascada del Ángel</p>
 
-var entrada=document.getElementById("entrada").value;
-var salida=document.getElementById("salida").value;
+<p>Turismo ecológico • Aventura • Naturaleza</p>
 
-if(entrada && salida){
+<p>© 2026</p>
 
-var fecha1=new Date(entrada);
-var fecha2=new Date(salida);
+</footer>
 
-var diferencia=(fecha2-fecha1)/(1000*60*60*24);
-
-document.getElementById("diasEstadia").innerHTML=
-"Estadía: "+diferencia+" días";
-
-}
-
-}
-
-function reservar(){
-
-var mensaje=document.getElementById("mensajeReserva");
-
-mensaje.innerHTML="✔ Reserva realizada con éxito.";
-
-return false;
-
-}
-
-</script>
-
-  
-<div class="redes">
+ <div class="redes">
 
 <a href="https://wa.me/50494884281" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="icono-red">
@@ -380,16 +355,6 @@ return false;
 </a>
 
 </div>
-
-  <footer>
-
-<p>Eco Camping Cascada del Ángel</p>
-
-<p>Turismo ecológico • Aventura • Naturaleza</p>
-
-<p>© 2026</p>
-
-</footer>
 </body>
 
 </html>
