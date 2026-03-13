@@ -29,8 +29,28 @@ position:relative;
 position:absolute;
 right:20px;
 top:10px;
-width:110px;
+width:90px;
 }
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.logo{
+position:relative;
+display:block;
+margin:10px auto;
+right:auto;
+top:auto;
+width:80px;
+}
+
+header{
+text-align:center;
+}
+
+}
+
 
 /* NAV */
 
@@ -171,26 +191,36 @@ right:10px;
 }
  .redes{
 position:fixed;
-bottom:25px;
-right:25px;
+bottom:20px;
+right:20px;
 display:flex;
 flex-direction:column;
 gap:12px;
-z-index:999;
+z-index:9999;
+}
+
+.redes a{
+width:55px;
+height:55px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:white;
+border-radius:50%;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+overflow:hidden;
 }
 
 .icono-red{
-width:55px;
-height:55px;
-border-radius:50%;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-cursor:pointer;
-transition:0.3s;
+width:60%;
+height:auto;
 }
 
-.icono-red:hover{
-transform:scale(1.15);
+.redes a:hover{
+transform:scale(1.1);
+transition:0.3s;
 }
+ }
 
 </style>
 
