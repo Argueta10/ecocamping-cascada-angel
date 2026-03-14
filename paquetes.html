@@ -61,8 +61,8 @@ text-align:center;
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 /* CARDS */
@@ -70,7 +70,7 @@ gap:25px;
 .card{
 background:white;
 padding:25px;
-border-radius:10px;
+border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
 transition:0.3s;
 }
@@ -79,11 +79,23 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-.card img{
+/* CONTENEDOR DE IMAGEN */
+
+.img-container{
 width:100%;
+height:220px;
+overflow:hidden;
 border-radius:10px;
 margin-bottom:15px;
 }
+
+.img-container img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* LISTA */
 
 .card ul{
 text-align:left;
@@ -93,12 +105,12 @@ text-align:left;
 
 .btn{
 display:inline-block;
-margin-top:10px;
-padding:10px 20px;
+margin-top:15px;
+padding:10px 25px;
 background:#2e8b57;
 color:white;
 text-decoration:none;
-border-radius:5px;
+border-radius:6px;
 }
 
 .btn:hover{
@@ -134,8 +146,9 @@ top:auto;
 </head>
 
 <body>
-  
+
 <nav>
+
 <a href="index.html">Inicio</a>
 <a href="servicios.html">Servicios</a>
 <a href="faq.html">FAQ</a>
@@ -143,7 +156,7 @@ top:auto;
 <a href="informacionadicional.html">Informacion adicional</a>
 
 </nav>
-  
+
 <header>
 
 <h1>Paquetes de Camping</h1>
@@ -159,15 +172,19 @@ top:auto;
 
 <div class="grid">
 
+<!-- PAQUETE FAMILIAR -->
+
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<div class="img-container">
+<img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4">
+</div>
 
 <h3>Paquete Familiar</h3>
 
 <ul>
 <li>Área de camping</li>
-<li>Senderismo</li>
+<li>Senderismo familiar</li>
 <li>Zona de fogata</li>
 <li>Acceso a baños</li>
 </ul>
@@ -176,9 +193,13 @@ top:auto;
 
 </div>
 
+<!-- PAQUETE AVENTURA -->
+
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<div class="img-container">
+<img src="https://images.unsplash.com/photo-1522163182402-834f871fd851">
+</div>
 
 <h3>Paquete Aventura</h3>
 
@@ -193,9 +214,13 @@ top:auto;
 
 </div>
 
+<!-- PAQUETE RELAX -->
+
 <div class="card">
 
+<div class="img-container">
 <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
+</div>
 
 <h3>Paquete Relax</h3>
 
@@ -214,9 +239,14 @@ top:auto;
 
 </section>
 
-  <a href="index.html" style="background:#2e8b57;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;">
-Home
-</a>
+<footer>
+
+<p>Eco Camping Cascada del Ángel</p>
+<p>Turismo ecológico • Aventura • Naturaleza</p>
+<p>© 2026</p>
+
+</footer>
+
 </body>
 
 </html>
