@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Información - Eco Camping Cascada del Ángel</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
+
+/* HEADER */
+
+header{
+background:#2e8b57;
+color:white;
+padding:20px;
+text-align:center;
+position:relative;
+}
+
+.logo{
+position:absolute;
+right:20px;
+top:10px;
+width:80px;
+}
+
+/* NAV */
+
+nav{
+background:#1f5c3a;
+text-align:center;
+padding:12px;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* SECCIÓN */
+
+section{
+padding:60px 10%;
+text-align:center;
+}
+
+h2{
+margin-bottom:40px;
+font-size:28px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* TARJETAS */
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card h3{
+color:#2e8b57;
+}
+
+/* MAPA */
+
+.mapa{
+margin-top:40px;
+}
+
+/* FOOTER */
+
+footer{
+background:#1f5c3a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.logo{
+position:relative;
+display:block;
+margin:auto;
+right:auto;
+top:auto;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Información del Eco Camping</h1>
+
+<p>Todo lo que necesitas saber antes de visitarnos</p>
+
+<img src="logo.png" class="logo">
+
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="servicios.html">Servicios</a>
+<a href="faq.html">FAQ</a>
+<a href="misionvision.html">Misión y Visión</a>
+<a href="informacionadicional.html">Informacion adicional</a>
+
+</nav>
+
+<section>
+
+<h2>Información General</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>📍 Ubicación</h3>
+
+<p>
+Comayagua<br>
+Francisco Morazán<br>
+Honduras
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>📞 Contacto</h3>
+
+<p>
+Teléfono:<br>
+9488-4281
+</p>
+
+<p>
+Email:<br>
+ecocamping@gmail.com
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🕒 Horarios</h3>
+
+<p>
+Lunes – Domingo<br>
+8:00 AM – 6:00 PM
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🏕️ Recomendaciones</h3>
+
+<p>
+• Llevar ropa cómoda<br>
+• Protector solar<br>
+• Repelente de insectos<br>
+• Zapatos para senderismo
+</p>
+
+</div>
+
+</div>
+
+<div class="mapa">
+
+<h2>Ubicación en el mapa</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Tegucigalpa,Honduras&output=embed"
+width="100%"
+height="350"
+style="border:0;border-radius:10px;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Eco Camping Cascada del Ángel</p>
+<p>Turismo ecológico • Aventura • Naturaleza</p>
+<p>© 2026</p>
+
+</footer>
+
+</body>
+
+</html>
