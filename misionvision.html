@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-  <body>
-    <style>
+<title>Misión y Visión - Eco Camping Cascada del Ángel</title>
+
+<style>
 
 body{
 margin:0;
@@ -42,39 +44,152 @@ color:white;
 margin:15px;
 text-decoration:none;
 font-weight:bold;
+font-size:16px;
 }
 
 nav a:hover{
 text-decoration:underline;
 }
 
+/* SECCIÓN */
+
+section{
+padding:60px 10%;
+text-align:center;
+}
+
+h2{
+margin-bottom:40px;
+font-size:28px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+/* TARJETAS */
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card h3{
+color:#2e8b57;
+font-size:22px;
+margin-bottom:15px;
+}
+
+.card p{
+font-size:16px;
+color:#444;
+line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+background:#1f5c3a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.logo{
+position:relative;
+display:block;
+margin:auto;
+right:auto;
+top:auto;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Misión y Visión</h1>
+
+<p>Conoce nuestro propósito y hacia dónde queremos llegar</p>
+
+<img src="logo.png" class="logo">
+
+</header>
+
 <nav>
+
 <a href="index.html">Inicio</a>
 <a href="servicios.html">Servicios</a>
+<a href="reservas.html">Reservas</a>
 <a href="faq.html">FAQ</a>
 <a href="misionvision.html">Misión y Visión</a>
-<a href="#">Informacion adicional</a>
 
 </nav>
-    
-<h1>Misión</h1>
+
+<section>
+
+<h2>Nuestra Filosofía</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Misión</h3>
+
 <p>
 Ofrecer una experiencia de turismo ecológico segura y organizada
 que permita a los visitantes disfrutar de la naturaleza mientras
 se promueve el cuidado del medio ambiente.
 </p>
 
-<h1>Visión</h1>
+</div>
+
+
+<div class="card">
+
+<h3>Visión</h3>
+
 <p>
 Convertirnos en uno de los destinos de eco-camping más innovadores
-de la región, integrando tecnología y sostenibilidad.
+de la región, integrando tecnología, sostenibilidad y aventura
+para nuestros visitantes.
 </p>
 
-<a href="index.html" style="background:#2e8b57;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;">
-Home
-</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Eco Camping Cascada del Ángel</p>
+<p>Turismo ecológico • Aventura • Naturaleza</p>
+<p>© 2026</p>
+
+</footer>
+
 </body>
+
 </html>
-
-
-
