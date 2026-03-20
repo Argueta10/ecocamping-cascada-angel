@@ -78,7 +78,15 @@ color:#2e8b57;
 </style>
 
 </head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
+<script>
+(function(){
+emailjs.init("p_qssjhJqF29OriH3"); 
+})();
+</script>
+    
+    
 <body>
 
     
@@ -151,35 +159,35 @@ function calcularDias(){
 
 function reservar(){
 
-    var nombre = document.getElementById("nombre").value;
-    var correo = document.getElementById("correo").value;
-    var personas = document.getElementById("personas").value;
-    var entrada = document.getElementById("entrada").value;
-    var salida = document.getElementById("salida").value;
+var nombre = document.getElementById("nombre").value;
+var correo = document.getElementById("correo").value;
+var entrada = document.getElementById("entrada").value;
+var salida = document.getElementById("salida").value;
+var personas = document.getElementById("personas").value;
 
-    var mensaje = document.getElementById("mensajeReserva");
+var templateParams = {
+nombre: nombre,
+correo: correo,
+entrada: entrada,
+salida: salida,
+personas: personas
+};
 
-    if(nombre && correo && personas && entrada && salida){
+emailjs.send("service_hemu3ym", "template_a01bfu5", templateParams)
+.then(function(response){
 
-        var fechaEntrada = new Date(entrada);
-        var fechaSalida = new Date(salida);
+document.getElementById("mensajeReserva").innerHTML =
+"🎉 Reserva confirmada. Revisa tu correo 📩";
 
-        if(fechaSalida > fechaEntrada){
-            mensaje.innerHTML =
-            "✔ Su reserva se ha realizado con éxito. ¡Gracias por elegir Cascada del Ángel!";
-        }else{
-            mensaje.innerHTML =
-            "⚠ La fecha de salida debe ser mayor a la fecha de llegada.";
-        }
+}, function(error){
 
-    } else {
-        mensaje.innerHTML =
-        "⚠ Por favor complete todos los campos.";
-    }
+document.getElementById("mensajeReserva").innerHTML =
+"❌ Error al enviar el correo";
 
-    return false;
+});
+
+return false;
 }
-
 
 </script>
   
